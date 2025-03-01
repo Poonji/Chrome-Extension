@@ -6,6 +6,7 @@ const ulEl=document.getElementById("ul-el")
 {
     myLeads.push(inputEl.value)
     inputEl.value="" // clearing the i/p feild after displaying
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))//  stores data in the browser's localStorage
     renderLeads()
 })
 function renderLeads(){
