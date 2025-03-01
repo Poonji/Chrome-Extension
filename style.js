@@ -14,7 +14,8 @@ for(let i=0;i<myLeads.length;i++)
 { 
     ListItems+=`
     <li>
-    <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}
+    <a target='_blank' href='${myLeads[i]}'>
+    ${myLeads[i]}
     </a>
     </li>
     ` 
@@ -23,8 +24,8 @@ for(let i=0;i<myLeads.length;i++)
 }
 
 /*  const recipient = "James"
-
+let sender=Poonji
 // Refactor the email string to use template strings
-const email = `Hey ${recipient}! How is it going? Cheers Per`
+const email = `Hey ${recipient}!(template string) How is it going? Cheers ${sender}`
 
-console.log(email) */  // template string
+console.log(email) */
