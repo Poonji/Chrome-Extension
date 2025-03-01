@@ -1,14 +1,30 @@
-let myLeads=["poonji","jadon","love", "prajjwal", "goswami"]
+let myLeads=[]
 const inputEl=document.getElementById("input-el")
 const inputBtn=document.getElementById("input-btn")
 const ulEl=document.getElementById("ul-el")
  inputBtn.addEventListener("click", function()
 {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    inputEl.value="" // clearing the i/p feild after displaying
+    renderLeads()
 })
-
+function renderLeads(){
+    let ListItems=""
 for(let i=0;i<myLeads.length;i++)
 { 
-    ulEl.innerHTML+="<li>" + myLeads[i]+"</li>"//adding HTML from JS
+    ListItems+=`
+    <li>
+    <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}
+    </a>
+    </li>
+    ` 
 }
+    ulEl.innerHTML=ListItems //adding HTML from JS
+}
+
+/*  const recipient = "James"
+
+// Refactor the email string to use template strings
+const email = `Hey ${recipient}! How is it going? Cheers Per`
+
+console.log(email) */  // template string
